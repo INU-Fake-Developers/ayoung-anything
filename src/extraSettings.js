@@ -38,7 +38,7 @@ let clickChangeFruit = true;
 let adLink = 'https://deemd.tistory.com/3';
 
 // 웹페이지 제목 수정 : "합성 큰 수박"을 바꿉니다.
-document.getElementsByTagName("title")[0].innerText = '合成大西瓜';
+document.getElementsByTagName("title")[0].innerText = '여행';
 
 // 선택 팝업 열기: false를 true로 고침
 let selectModal = false;
