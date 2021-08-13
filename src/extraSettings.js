@@ -1,45 +1,45 @@
 /**
- * 声明，本项目仅帮助大家学习技术及娱乐，切勿将修改后的网站大规模传播及商用，以避免侵权！
+ * 수정, 재배포, 상업적 사용을 금지합니다. 학습 용도로만 사용하세요
  */
 
-// 额外分数：修改数字
+// 추가점수: 숫자 수정
 let extraScore = 1;
 
-// 无敌模式：true 改为 false
+// 무적：true 改为 false
 let wuDi = true;
 
-// 第一个水果：修改数字为 0-10, 0 为葡萄，9 为半个西瓜
+// 첫번째 과일：숫자 변경 0-10, 0 위(?)포도，9 수박 반개
 let firstFruit = 0;
 
-// 水果合成反转：false 改为 true
+// 합성된 과일 작아지게 하기：false 바꾸기 true
 let reverseLevelUp = false;
 
-// 指定生成的水果：默认值: 不开启反转 0-5 开启反转 6-11，修改对应数字即可控制随机生成的水果范围
-const minRandomFruitNum = reverseLevelUp ? 6 : 0; // 生成随机水果最小值（0-10）0 为葡萄，9 为半个西瓜
-const maxRandomFruitNum = reverseLevelUp ? 11 : 5; // 生成随机水果最大值（1-11）0 为葡萄，9 为半个西瓜
+// 생성된 과일 지정：기본값: 반전 시작 안함 0-5 반전 시작 6-11，이 숫자 설정하면 무작위로 생성된 과일 범위 제어 가능
+const minRandomFruitNum = reverseLevelUp ? 6 : 0; // 무작위 과일 최솟값 설정（0-10）0 위(?)포도，9 수박 반개
+const maxRandomFruitNum = reverseLevelUp ? 11 : 5; // 무작위 과일 최댓값 설정（1-11）0 위포도，9 수박 반개
 let setFruits = {
-  // 指定前几次生成的水果，可填入任意数量的数字，0 为葡萄，9 为半个西瓜
+  // 지정 전에 몇 번 생성된 과일은 임의 수량의 수 입력 가능，0 위포도，9 수박 반개
   startFruits: reverseLevelUp ? [10, 10, 9, 8, 8, 7] : [0, 0, 1, 2, 2, 3],
   randomFunction: () => {
     return minRandomFruitNum + Math.floor(Math.random() * (maxRandomFruitNum - minRandomFruitNum));
   }
 }
 
-// 让水果更 Q 弹：false 改为大于 0 小于 1 的任意小数（推荐 0.9）
+// 과일 더하다(갱신) Q 튕기다：false 크기를 초과로 고침 0 작게 1 추천하는 임의의 소수（추천 0.9）
 let fruitQTan = false;
 
-// 让水果下落缓慢：false 改为大于 0 的任意数，值越大阻力越大，下落越慢（推荐 5）
+// 과일 느리게 떨어뜨리기：false 크기를 초과로 고침 0 임의의 수, 값이 클수록 저항 크고 내려오는게 느려 (5 추천)
 let fruitSlowDown = false;
 
-// 点击右上方图标更换水果：false 改为 true 即可
+// 오른쪽 상단 아이콘 눌러서 과일 교체：false 고치다 true 될 수 있어
 let clickChangeFruit = true;
 
-// 广告链接：false 或为空字符串表示不会跳转到广告
-let adLink = 'https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/yupi_wechat.png';
+// 광고 링크：false 빈 문자열이 광고로 넘어가지 않을 수 도 있음을 나타냄
+let adLink = 'https://deemd.tistory.com/3';
 
-// 修改网页标题：将 "合成大西瓜" 进行替换
+// 웹페이지 제목 수정 : "합성 큰 수박"을 바꿉니다.
 document.getElementsByTagName("title")[0].innerText = '合成大西瓜';
 
-// 开启选分弹窗：将 false 改为 true
+// 선택 팝업 열기: false를 true로 고침
 let selectModal = false;
 
